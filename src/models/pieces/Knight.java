@@ -40,6 +40,6 @@ public class Knight extends Piece{
     public String toString() {
         if (getColor()==Color.WHITE)
             return "♘";
-        else return "♞";
+        else return "♞"; //test 2
     }
 }

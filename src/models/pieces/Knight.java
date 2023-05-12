@@ -41,5 +41,6 @@ public class Knight extends Piece{
         if (getColor()==Color.WHITE)
             return "♘"; // pawn test
         else return "♞";
+            //test 2
     }
 }

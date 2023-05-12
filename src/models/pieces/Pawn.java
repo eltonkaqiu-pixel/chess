@@ -48,7 +48,7 @@ public class Pawn extends Piece{
         }
 
         if (Math.abs(startPosition.getX()-endPosition.getX()) == 1 && Math.abs(startPosition.getY() - endPosition.getY()) == 1){
-            if (end.getPiece() != null && end.getPiece().getColor().equals(this.getColor())){
+            if (end.getPiece() != null && !end.getPiece().getColor().equals(this.getColor())){
                 return true;
             }
         }

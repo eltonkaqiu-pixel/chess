@@ -39,16 +39,16 @@ public class Pawn extends Piece{
         if (!hasMoved){
             if(Math.abs(startPosition.getX()-endPosition.getX()) == 2 && startPosition.getY() == endPosition.getY()){
                 hasMoved = true;
-                return true;
+                return end.getPiece() == null;
             }
         }
 
         if(Math.abs(startPosition.getX()-endPosition.getX()) == 1 && startPosition.getY() == endPosition.getY()){
-            return true;
+            return end.getPiece() == null;
         }
 
         if (Math.abs(startPosition.getX()-endPosition.getX()) == 1 && Math.abs(startPosition.getY() - endPosition.getY()) == 1){
-            if (end.getPiece() != null){
+            if (end.getPiece() != null && end.getPiece().getColor().equals(this.getColor())){
                 return true;
             }
         }

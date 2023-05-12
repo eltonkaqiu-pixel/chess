@@ -114,5 +114,28 @@ public class Game {
         }
 
         board.print();
+
+        System.out.println("Levizja e 10-nuk mund te levize");
+        start = board.getSquare(6, 1);
+        end = board.getSquare(5, 1);
+        firstMove = new Move(null, start, end);
+        pieceMoved = firstMove.getStart().getPiece();
+        if (pieceMoved.isLegal(board, start, end)) {
+            firstMove.getEnd().setPiece(firstMove.getStart().getPiece());
+            firstMove.getStart().setPiece(null);
+        }
+
+        board.print();
+        System.out.println("Levizja e 11-te merre nje figure");
+        start = board.getSquare(6, 2);
+        end = board.getSquare(5, 1);
+        firstMove = new Move(null, start, end);
+        pieceMoved = firstMove.getStart().getPiece();
+        if (pieceMoved.isLegal(board, start, end)) {
+            firstMove.getEnd().setPiece(firstMove.getStart().getPiece());
+            firstMove.getStart().setPiece(null);
+        }
+
+        board.print();
     }
 }

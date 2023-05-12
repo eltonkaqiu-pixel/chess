@@ -4,6 +4,7 @@ import exceptions.BoardOutOfBoundsException;
 import models.pieces.Piece;
 
 public class Game {
+    //TODO: makeMove method
     public static void main(String[] args) throws BoardOutOfBoundsException {
         Board board = new Board();
         board.initializeBoard();
